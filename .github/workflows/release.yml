@@ -4,6 +4,10 @@ on:
   push:
     tags: ["v*"]
 
+# The default token is read-only in stray-frame; releases need to write.
+permissions:
+  contents: write
+
 jobs:
   create-release:
     name: Create Release
